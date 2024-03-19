@@ -1,3 +1,5 @@
+import cardback from '../assets/cardback.png'
+
 const MemoryCard = (props) => {
 
     const cardStyle = {
@@ -7,7 +9,7 @@ const MemoryCard = (props) => {
     }
     return (
         <div style={cardStyle}>
-            <img src="../assets/cardback.png" />
+            <img src={cardback} height="200" width="144" />
         </div>
     )
 }
