@@ -36,28 +36,21 @@ const MemoryCard = (props) => {
         })
     }
 
-    const cardStyle = {
-        height:200,
-        width:144,
-        margin:5,
-        backgroundColor:"red"
-    }
 
     //Konditionaalinen renderöinti, jossa riippuen kortin tilasta kortti joko piirretään punainen puoli tai
     //kuvapuoli ylöspäin
 
-    if(state.isOpen) {
-        return (
-            <div style={cardStyle}>
+
+    return (
+        <div className="card">
+            <div className={state.isOpen ? "turned":""}>
+                <img src={cardback} className="back" onClick={turnCard} alt="back" />
+                <div className="face">
+                </div>
             </div>
-        )
-    } else {
-        return (
-            <div style={cardStyle} onClick={turnCard}>
-                <img src={cardback} height="200" width="144" />
-            </div>
-        )
-    }
+        </div>
+    )
+
 }
 
 export default MemoryCard

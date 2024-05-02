@@ -4,3 +4,37 @@
     flex-wrap: wrap;
     width:650px;
 }
+
+.face {
+    height: 200px;
+    width:144px;
+    margin: 5px;
+    background-color: red;
+    color:red;
+}
+
+.back {
+    height: 200px;
+    width:144px;
+    margin: 5px;
+}
+.card .face { 
+    transform: rotateY(90deg); 
+    transition: all ease-in 0.25s; 
+}
+
+.card .back {
+    position: absolute; 
+    transition: all ease-in 0.25s; 
+    transition-delay: 0.25s;    
+}
+
+.turned .face {
+    transform: rotateY(0deg); 
+    transition-delay: 0.25s; 
+}
+
+.turned .back {
+    transform: rotateY(90deg); 
+    transition-delay: 0s; 
+}
